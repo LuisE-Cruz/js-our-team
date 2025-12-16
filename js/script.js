@@ -41,12 +41,7 @@ const teamMembers = [
 const teamContainer = document.querySelector(".container-team");
 
 
-rederTeam(teamMembers, teamContainer)
-
-
-
-
-
+showCards(teamMembers, teamContainer)
 
 
 // FUNZIONI
@@ -77,37 +72,18 @@ function createTeamCard(obj) {
 
 //Funzione che serve a fare il rendering delle diverse card dentro l'html grazie ad un ciclo for
 
-// function showCards(array, outputEl){
+function showCards(array, outputEl){
 
-//   let cards = '';
+  let cards = '';
 
-//   for (let index = 0; index < array.length; index++) {
+  for (let index = 0; index < array.length; index++) {
 
-//     const member = array[index];
+    const member = array[index];
 
-//     cards += createTeamCard(member);
-//   }
-
-// }
-
-
-
-function rederTeam(arraRef, outputEL) {
-    // mi creo var che accumulerà gli elementi di ouput
-    let cards = "";
-
-    // output di prova ciclando l'array di oggetti
-    for (let index = 0; index < arraRef.length; index++) {
-        // estrapoliamo ogni volta un oggetto membro divero
-        const memberTeam = arraRef[index];
-
-        // destrutturiamo l'oggetto
-        // const { name, image, role } = memberTeam;
-
-        // andiamo ad ogni giro ad incrementare il contenuto dell'output
-        cards += createTeamCard(memberTeam);
-    }
-
-    // inseriamo la stringa completa che innerHTML trasformerà, nell'elemento di output
-    outputEL.innerHTML = cards;
+    cards += createTeamCard(member);
+  }
+  outputEl.innerHTML = cards;
 }
+
+
+
