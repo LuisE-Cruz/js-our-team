@@ -36,3 +36,5 @@ const teamMembers = [
     img: "img/female3.png"
   }
 ];
+
+const teamContainer = document.querySelector(".container-team");
